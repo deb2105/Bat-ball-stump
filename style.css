@@ -1,0 +1,141 @@
+.container {
+    background-color: rgb(251, 250, 253);
+    height: auto; /* Allow the height to adjust based on content */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+}
+
+.heaing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(178, 56, 197);
+    background-color: rgb(196, 167, 235);
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.heaing p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 20px;
+    border: 2px solid rgb(163, 64, 178);
+    background-color: rgb(196, 167, 235);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 80px; /* Fixed width for buttons */
+    height: 80px; /* Fixed height for buttons */
+}
+
+.image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits within the button */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-button:active {
+    transform: scale(0.95);
+}
+
+.reset-button {
+    align-self: center; /* Align reset button in the middle */
+    padding: 10px 20px;
+    background-color: rgb(178, 56, 197);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset-button:hover {
+    background-color: rgb(150, 40, 180);
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.score div {
+    font-size: 18px;
+    color: #555;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .buttons-container {
+        flex-wrap: wrap; /* Wrap buttons for smaller screens */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .image-button {
+        width: 70px; /* Reduce size of buttons */
+        height: 70px;
+    }
+
+    .reset-button {
+        margin-top: 10px; /* Add space above reset button for smaller screens */
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+
+    .heaing p {
+        font-size: 1.2rem;
+    }
+
+    .image-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .reset-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
